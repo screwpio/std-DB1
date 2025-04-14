@@ -20,12 +20,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-df_info = pd.read_csv("data/Students List(Student List).csv")
+df_info = pd.read_csv(r"C:\Users\mhnd7\Downloads\student-db-web\backend\data\Students List(Student List).csv")
 df_info["Student ID"] = pd.to_numeric(df_info["Student ID"], errors="coerce")
 df_info.dropna(subset=["Student ID"], inplace=True)
 df_info["Student ID"] = df_info["Student ID"].astype(int)
 
-df_preds = pd.read_csv("data/student_predictions.csv")
+df_preds = pd.read_csv(r"C:\Users\mhnd7\Downloads\student-db-web\backend\data\student_predictions.csv")
 
 @app.get("/")
 def root():
