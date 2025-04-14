@@ -4,7 +4,7 @@ import numpy as np
 from collections import defaultdict, Counter
 from functools import lru_cache
 
-df = pd.read_csv("data/Students List(Student List).csv")
+df = pd.read_csv(r"C:\Users\mhnd7\Downloads\student-db-web\backend\recommender.py")
 df = df[df["Student ID"].notnull()]
 df["Student ID"] = df["Student ID"].astype(float).astype(int)
 df["Major Applied for"] = df["Major Applied for"].astype(str).str.strip()
